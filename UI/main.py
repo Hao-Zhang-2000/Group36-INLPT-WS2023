@@ -1,18 +1,25 @@
 import requests
 from taipy.gui import Gui, State, notify
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import PeftModel, LoraConfig, prepare_model_for_kbit_training, get_peft_model
+import os
+from data.databases import NumpyDataBase
+from data.embedding_models import EmbeddingModelMiniLML6
+from training.utils import LLAMA_TEMPLATES, MISTRAL_TEMPLATES, system_message, format_user_message, format_conversation
+import json
 
-context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Google. How can I help you today? "
+
+
+context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI-Assistant. How can I help you today? "
 conversation = {
-    "Conversation": ["Who are you?", "Hi! I am FLAN-T5 XXL. How can I help you today?"]
+    "Conversation": ["Who are you?", "Hi! I am AI-Assistant. How can I help you today?"]
 }
 current_user_message = ""
 
 API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"
 headers = {"Authorization": "Bearer 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"}
 
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()
 
 
 def request(state: State, prompt: str) -> str:
@@ -27,14 +34,24 @@ def request(state: State, prompt: str) -> str:
         The response from the API.
     """
 
-    output = query(
-        {
-            "inputs": prompt,
-        }
-    )
-    print(output)
-    return output[0]["generated_text"]
+    user_query = "How can cold social intelligence promote behaviors in girls that lead to social preference?"
+    relevant_abstracts = database.retrieve_by_query(user_query)
 
+    conversation = [
+        {
+            "role": "system",
+            "content": system_message
+        },
+        {
+            "role": "user",
+            "content": format_user_message(user_query, relevant_abstracts)
+        }
+    ]
+    _, input_ids = format_conversation(conversation, base_model['templates'], tokenizer, training=False)
+
+    response = model.generate(input_ids=torch.tensor(input_ids).unsqueeze(0), max_new_tokens=1)
+
+    return tokenizer.decode(response.squeeze().tolist())
 
 def send_message(state: State) -> None:
     """
@@ -82,4 +99,49 @@ page = """
 """
 
 if __name__ == "__main__":
+    with open("../data/data.json", "r") as f:
+        data = json.load(f)
+    embedding_model = EmbeddingModelMiniLML6()
+    database = NumpyDataBase(data=data, embedding_model=embedding_model)
+
+    base_model = {
+        "llama": {
+            "path": "meta-llama/Llama-2-7b-chat-hf",
+            "save-path": "MediRAG-LLaMA",
+            "templates": LLAMA_TEMPLATES
+        },
+        "mistral": {
+            "path": "mistralai/Mistral-7B-Instruct-v0.2",
+            "save-path": "MediRAG-Mistral",
+            "templates": MISTRAL_TEMPLATES
+        },
+        "meditron": {
+            "path": "epfl-llm/meditron-7b",
+            "save-path": "MediRAG-Meditron2",
+            "templates": LLAMA_TEMPLATES
+        }
+    }["llama"]
+
+    quant_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.float16,
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        base_model['path'],
+        quantization_config=quant_config,
+        cache_dir='I:\\huggingfacemodels',
+        use_auth_token='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'
+        # trust_remote_code=True
+    )
+    model.config.use_cache = False
+
+    model = PeftModel.from_pretrained(model, f"../training/{base_model['save-path']}/")
+    # model = PeftModel.from_pretrained(model)
+    # model = prepare_model_for_kbit_training(model)
+
+    tokenizer = AutoTokenizer.from_pretrained(base_model['path'], use_fast=False,
+                                              use_auth_token='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')
+    tokenizer.pad_token = tokenizer.eos_token
+
     Gui(page).run(dark_mode=True, title="Taipy Chat")
