@@ -49,7 +49,7 @@ def request(state: State, prompt: str) -> str:
     ]
     _, input_ids = format_conversation(conversation, base_model['templates'], tokenizer, training=False)
 
-    response = model.generate(input_ids=torch.tensor(input_ids).unsqueeze(0), max_new_tokens=1)
+    response = model.generate(input_ids=torch.tensor(input_ids).unsqueeze(0), max_new_tokens=512)
 
     return tokenizer.decode(response.squeeze().tolist())
 
