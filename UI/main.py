@@ -34,7 +34,7 @@ def request(state: State, prompt: str) -> str:
         The response from the API.
     """
 
-    user_query = "How can cold social intelligence promote behaviors in girls that lead to social preference?"
+    user_query = prompt
     relevant_abstracts = database.retrieve_by_query(user_query)
 
     conversation = [
