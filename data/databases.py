@@ -1,9 +1,12 @@
+import sys
+sys.path.append("../")
+
 import torch
 from torch.nn import functional as F
 import numpy as np
 from abc import ABC, abstractmethod
 from typing import List, Tuple, Dict
-from embedding_models import EmbeddingModel
+#from embedding_models import EmbeddingModel
 
 class DataBase(ABC):
     @abstractmethod
@@ -11,7 +14,8 @@ class DataBase(ABC):
         pass
 
 class NumpyDataBase(DataBase):
-    def __init__(self, data: List[Dict], embedding_model: EmbeddingModel):
+#    def __init__(self, data: List[Dict], embedding_model: EmbeddingModel):
+    def __init__(self, data: List[Dict], embedding_model):
         for sample in data:
             assert len(sample['embedding']) == len(data[0]['embedding']), "embeddings don't all have the same dimension"
 
