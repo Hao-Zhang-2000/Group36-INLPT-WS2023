@@ -27,6 +27,9 @@ Mail: hao.zhang@stud.uni-heidelberg.de<br />
 Github ID:Hao-Zhang-2000<br />
 did the evaluation part for the information retrieval and the RAG<br />
 
+## Dependencies
+see `requirements.txt`
+
 ## Before The Start
 the `data.json` file in directory `data` is missing, to generate it, run the `embed_and_store.py` at the directory `data`
 
