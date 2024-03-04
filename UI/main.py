@@ -136,7 +136,8 @@ if __name__ == "__main__":
     )
     model.config.use_cache = False
 
-    model = PeftModel.from_pretrained(model, f"../training/{base_model['save-path']}/")
+    # the finetuned model performs not decently
+    #model = PeftModel.from_pretrained(model, f"../training/{base_model['save-path']}/")
     # model = PeftModel.from_pretrained(model)
     # model = prepare_model_for_kbit_training(model)
 
