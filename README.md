@@ -1,6 +1,6 @@
 # Note
 
-The final project is in 'Final' branch, this is a temporary backward version of it
+The final project is in `Final` branch, this is a temporary backward version of it
 
 ## Group Members
 
