@@ -4,7 +4,7 @@ Matriculation number: 4732232<br />
 Course of study: Master’s in Data and Computer Science <br />
 Mail ID: jatinrk21@gmail.com  <br />
 Github ID:bhardwajjjatin <br />
-Contribution:wrote the report <br />
+Contribution:wrote the report and try to make User Interface more user friendly. Also do code optimization of the project<br />
 
 Name: Christopher Lindenberg<br />
 Matriculation Number: 3715220<br />
