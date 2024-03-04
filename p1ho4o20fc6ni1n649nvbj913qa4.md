@@ -1,73 +1,14 @@
 **NLP Project**
 
-### Christopher Lindenberg {#christopher-lindenberg .unnumbered}
+### Christopher Lindenberg 
 
-### Jatin Jatin {#jatin-jatin .unnumbered}
+### Jatin Jatin 
 
-###  Hao Zhang {#hao-zhang .unnumbered}
+###  Hao Zhang
 
-###  Yulin Liu {#yulin-liu .unnumbered}
+###  Yulin Liu 
 
-###  Group 36 {#group-36 .unnumbered}
-
-> **Contents**
-
-1.  
-
-2.  1.  
-    2.  
-
-3.  1.  1.  
-        2.  
-        3.  
-
-    2.  1.  
-        2.  
-        3.  
-        4.  
-
-4.  1.  
-    2.  
-    3.  
-
-5.  1.  
-    2.  
-    3.  
-
-6.  1.  
-    2.  
-    3.  
-    4.  
-    5.  
-    6.  
-
-[Motivation 5](#motivation)[Problem Definition
-5](#problem-definition)[Ideal Scenario 6](#ideal-scenario)[Costs of
-Inefficiency 6](#costs-of-inefficiency)[Model Architecture
-6](#model-architecture)[Retrieval-Augmented Generation (RAG) System
-6](#retrieval-augmented-generation-rag-system)[Retriever Component
-6](#retriever-component)[Generator Component
-7](#generator-component)[Integration 7](#integration)[Question Answering
-(QA) System 7](#question-answering-qa-system)[Preprocessing Module
-7](#preprocessing-module)[QA Model 8](#qa-model)[Post-processing Module
-8](#post-processing-module)[Integration 8](#integration-1)[RAG
-Evaluation and Implementation
-8](#rag-evaluation-and-implementation)[Retrieval Evaluation
-8](#retrieval-evaluation)[Response Evaluation
-9](#response-evaluation)[Implementation 9](#implementation)[Data
-Description 9](#data-description)[Data Source 9](#data-source)[Data
-Structure 10](#data-structure)[Information About Metadata
-10](#information-about-metadata)[Data Acquisition Plan
-10](#data-acquisition-plan)[Collection Process
-10](#collection-process)[Collection Parameters
-10](#collection-parameters)[Data Storage
-10](#data-storage)[Preprocessing 10](#preprocessing)[Embedding
-Generation 11](#embedding-generation)[Storage and Indexing
-11](#storage-and-indexing)
-
-7.  **Conclusion 11**
-
-8.  **Open Issues 13**
+###  Group 36 
 
 > **Abstract**
 >
