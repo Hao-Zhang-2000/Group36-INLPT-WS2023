@@ -63,7 +63,7 @@ def send_message(state: State) -> None:
     # Add the user's message to the context
     state.context += f"Human: \n {state.current_user_message}\n\n AI:"
     # Send the user's message to the API and get the response
-    answer = request(state, state.context).replace("\n", "")
+    answer = request(state, state.current_user_message)
     # Add the response to the context for future messages
     state.context += answer
     # Update the conversation
