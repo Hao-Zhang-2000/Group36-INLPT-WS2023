@@ -20,6 +20,6 @@ Jatin Jatin -bhardwajjjatin -wrote the report
 
 Christopher Lindenberg -Christopher Lindenberg -made the retrieval pipeline with embedding models and databases and tried to train some models but that kinda went wrong
 
-Yulin Liu -Lin9773 -did the UI and RAG implementation and evaluation
+Yulin Liu -Lin9773 -did the Data Collection, UI and RAG implementation and evaluation
 
 Hao Zhang -Hao-Zhang-2000 - did the evaluation part for the information retrieval and the RAG
