@@ -25,7 +25,7 @@ Matriculation Number: 4735257<br />
 Course of study: Master in Scientific Computing 100%<br />
 Mail: hao.zhang@stud.uni-heidelberg.de<br />
 Github ID:Hao-Zhang-2000<br />
-did the evaluation part for the information retrieval and the RAG<br />
+did the data embedding and storage in Pinecone, and evaluation part for the information retrieval and the RAG<br />
 
 ## Dependencies
 see `requirements.txt`
