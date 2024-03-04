@@ -8,7 +8,7 @@ from data.databases import NumpyDataBase
 from data.embedding_models import EmbeddingModelMiniLML6
 from training.utils import LLAMA_TEMPLATES, MISTRAL_TEMPLATES, system_message, format_user_message, format_conversation
 import json
-
+import re
 
 
 context = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI-Assistant. How can I help you today? "
@@ -51,7 +51,10 @@ def request(state: State, prompt: str) -> str:
 
     response = model.generate(input_ids=torch.tensor(input_ids).unsqueeze(0), max_new_tokens=512)
 
-    return tokenizer.decode(response.squeeze().tolist())
+    temp_text = tokenizer.decode(response.squeeze().tolist())
+    # match the result as short as possible
+    temp_text = re.findall(r'\[/INST\](.+)</s>', temp_text, re.DOTALL)[0]
+    return temp_text
 
 def send_message(state: State) -> None:
     """
