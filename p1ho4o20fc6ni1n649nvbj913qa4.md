@@ -474,4 +474,4 @@ Figure 1: A benchmark of our Numpy Database and our Pinecone Database.
 5.  Preparing Legal Documents for NLP Analysis: Improving the
     Classifications of Text Elements by Using Page Features.
     ResearchGate.
-    h[ttps://www.researc](http://www.researchgate.net/publication/358028171)hgate.n[et/publication/358028171](http://www.researchgate.net/publication/358028171)
+    https://www.researchgate.net/publication/358028171
