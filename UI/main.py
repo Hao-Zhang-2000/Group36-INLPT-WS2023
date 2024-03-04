@@ -123,7 +123,7 @@ if __name__ == "__main__":
             "save-path": "MediRAG-Meditron2",
             "templates": LLAMA_TEMPLATES
         }
-    }["llama"]
+    }["mistral"]
 
     quant_config = BitsAndBytesConfig(
         load_in_4bit=True,
