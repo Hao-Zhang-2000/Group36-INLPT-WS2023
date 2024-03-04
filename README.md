@@ -1,8 +1,6 @@
-# UI
+# Note
 
-![Preview](preview1.png)
-
-This directory contains the User Interface components of our project.
+The final project is in 'Final' branch, this is a temporary backward version of it
 
 ## Group Members
 
