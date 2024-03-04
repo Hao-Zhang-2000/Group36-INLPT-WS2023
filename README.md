@@ -1,3 +1,32 @@
+## Group Members & Contributions
+Name: Jatin Jatin
+Matriculation number: 4732232
+Course of study: Master’s in Data and Computer Science 
+Mail ID: jatinrk21@gmail.com  
+Github ID:bhardwajjjatin 
+wrote the report 
+
+Name: Christopher Lindenberg
+Matriculation Number: 3715220
+Course of study: Bachelors in Computer Science 100%
+Mail: christopher.lindenberg@stud.uni-heidelberg.de 
+Github ID:Christopher Lindenberg
+made the retrieval pipeline with embedding models and databases and tried to train some models but that kinda went wrong
+
+Name: Yulin Liu
+Matriculation Number: 4735159
+Course of study: Master in Scientific Computing 100%
+Mail: tong54387@gmail.com
+Github ID:Lin9773
+did the Data Collection, UI and RAG implementation and evaluation
+
+Name: Hao-Zhang
+Matriculation Number: 4735257
+Course of study: Master in Scientific Computing 100%
+Mail: hao.zhang@stud.uni-heidelberg.de
+Github ID:Hao-Zhang-2000
+did the evaluation part for the information retrieval and the RAG
+
 ## Before The Start
 the `data.json` file in directory `data` is missing, to generate it, run the `embed_and_store.py` at the directory `data`
 
@@ -14,12 +43,4 @@ the json for evaluation is already generated in folder `output`, to re-generate 
 
 
 
-## Group Members & Contributions
 
-Jatin Jatin -bhardwajjjatin -wrote the report 
-
-Christopher Lindenberg -Christopher Lindenberg -made the retrieval pipeline with embedding models and databases and tried to train some models but that kinda went wrong
-
-Yulin Liu -Lin9773 -did the Data Collection, UI and RAG implementation and evaluation
-
-Hao Zhang -Hao-Zhang-2000 - did the evaluation part for the information retrieval and the RAG
