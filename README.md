@@ -1,10 +1,10 @@
 ## Group Members & Contributions
-Name: Jatin Jatin
-Matriculation number: 4732232
-Course of study: Master’s in Data and Computer Science 
-Mail ID: jatinrk21@gmail.com  
-Github ID:bhardwajjjatin 
-wrote the report 
+Name: Jatin Jatin<br />
+Matriculation number: 4732232<br />
+Course of study: Master’s in Data and Computer Science <br />
+Mail ID: jatinrk21@gmail.com  <br />
+Github ID:bhardwajjjatin <br />
+wrote the report <br />
 
 Name: Christopher Lindenberg
 Matriculation Number: 3715220
