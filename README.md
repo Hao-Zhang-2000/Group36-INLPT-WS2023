@@ -6,26 +6,26 @@ Mail ID: jatinrk21@gmail.com  <br />
 Github ID:bhardwajjjatin <br />
 wrote the report <br />
 
-Name: Christopher Lindenberg
-Matriculation Number: 3715220
-Course of study: Bachelors in Computer Science 100%
-Mail: christopher.lindenberg@stud.uni-heidelberg.de 
-Github ID:Christopher Lindenberg
-made the retrieval pipeline with embedding models and databases and tried to train some models but that kinda went wrong
+Name: Christopher Lindenberg<br />
+Matriculation Number: 3715220<br />
+Course of study: Bachelors in Computer Science 100%<br />
+Mail: christopher.lindenberg@stud.uni-heidelberg.de <br />
+Github ID:Christopher Lindenberg<br />
+made the retrieval pipeline with embedding models and databases and tried to train some models but that kinda went wrong<br />
 
-Name: Yulin Liu
-Matriculation Number: 4735159
-Course of study: Master in Scientific Computing 100%
-Mail: tong54387@gmail.com
-Github ID:Lin9773
-did the Data Collection, UI and RAG implementation and evaluation
+Name: Yulin Liu<br />
+Matriculation Number: 4735159<br />
+Course of study: Master in Scientific Computing 100%<br />
+Mail: tong54387@gmail.com<br />
+Github ID:Lin9773<br />
+did the Data Collection, UI and RAG implementation and evaluation<br />
 
-Name: Hao-Zhang
-Matriculation Number: 4735257
-Course of study: Master in Scientific Computing 100%
-Mail: hao.zhang@stud.uni-heidelberg.de
-Github ID:Hao-Zhang-2000
-did the evaluation part for the information retrieval and the RAG
+Name: Hao-Zhang<br />
+Matriculation Number: 4735257<br />
+Course of study: Master in Scientific Computing 100%<br />
+Mail: hao.zhang@stud.uni-heidelberg.de<br />
+Github ID:Hao-Zhang-2000<br />
+did the evaluation part for the information retrieval and the RAG<br />
 
 ## Before The Start
 the `data.json` file in directory `data` is missing, to generate it, run the `embed_and_store.py` at the directory `data`
