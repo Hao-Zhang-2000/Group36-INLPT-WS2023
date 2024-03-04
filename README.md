@@ -4,13 +4,15 @@ the `data.json` file in directory `data` is missing, to generate it, run the `em
 ## UI
 the `main.py` file located in `UI` folder starts the UI interface once finishing loading the model.
 
+![Preview](preview1.png)
+
+This directory contains the User Interface components of our project.
+
 ## Evaluation
 the json for evaluation is already generated in folder `output`, to re-generate it, run the `evaluate.py` at the root folder. To evaluate the rag, run the `Evaluation/evaluate_method1.py`. To evaluate the IR, run `data/IR_evaluation_numpy.ipynb`
 
 
-![Preview](preview1.png)
 
-This directory contains the User Interface components of our project.
 
 ## Group Members & Contributions
 
